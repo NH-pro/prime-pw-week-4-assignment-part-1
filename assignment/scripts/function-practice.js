@@ -68,20 +68,17 @@ console.log(getLast(array1));
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-let array2 = ['A', 'B', 'C', 'D'];
+let array2 = ['a', 'b', 'c', 'd'];
 
-function find( value, array){
+function find(value, array){
   for (item of array){
-    if (item === value){
-      return 'true';
-    }
-    else{
-      return 'false';
+    if (value === item){
+      return true;
     }
   }
+  return false;
 }
-
-console.log( find( 'C', array2));
+console.log( find('b', array2));
 
 // ----------------------
 // Stretch Goals

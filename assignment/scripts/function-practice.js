@@ -54,16 +54,15 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 let array1 = ['firstItem', 'secondItem', 'lastItem'];
+let emptyArray = [];
 
 function getLast( array ) {
   if (array.length > 0){
     return array[array.length - 1];
   }
-  else {
-    return 'undefined';
-  }
 }
-console.log(getLast(array1));
+console.log('Should show last item:',getLast(array1));
+console.log('Should show undefined:',getLast(emptyArray));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
@@ -78,7 +77,8 @@ function find(value, array){
   }
   return false;
 }
-console.log( find('b', array2));
+console.log('Should say true:',find('b', array2));
+console.log('Should say flase:',find('f',array2));
 
 // ----------------------
 // Stretch Goals
@@ -86,17 +86,30 @@ console.log( find('b', array2));
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+  for (first of string){
+    if (letter === first){
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll( ) {
+let array3 = [1, 2, 3, 4];
+
+function sumAll( array ) {
   let sum = 0
-  // TODO: loop to add items
+// TODO: loop to add items
+  for (number of array){
+    sum = number + sum;
+  }
   return sum;
 }
+console.log(sumAll(array3));
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers

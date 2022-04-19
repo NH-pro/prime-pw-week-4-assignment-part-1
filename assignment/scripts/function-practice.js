@@ -114,9 +114,34 @@ console.log(sumAll(array3));
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+let allNumberArray = [-3, -2, -1, 0, 1, 2, 3];
+let negNumberArray = [-3, -2, -1, 0];
 
-
+function newArrayMaker (array){
+  let newArray = [];
+  for (number of array){
+    if (number > 0){
+      newArray.push(number);
+    }
+  }
+  return newArray;
+}
+console.log('Should show a new array with only positive numbers:',newArrayMaker(allNumberArray));
+console.log('Should show a new array that is empty:',newArrayMaker(negNumberArray));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
+// CODE DESCRIPTION:
+
+// Figure out why this code won't run properly:
+// Function multiply(a, b){
+//    a * b
+// }
+
+// Answer: The code would not run properly because it could not return any answer.
+function multiply(a, b){
+  return a * b;
+}
+console.log('Should show 20:',multiply(2, 10));

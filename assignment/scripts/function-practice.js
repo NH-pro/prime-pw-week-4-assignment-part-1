@@ -70,7 +70,7 @@ console.log('Should show undefined:',getLast(emptyArray));
 let array2 = ['a', 'b', 'c', 'd'];
 
 function find(value, array){
-  for (item of array){
+  for (let item of array){
     if (value === item){
       return true;
     }
@@ -86,7 +86,7 @@ console.log('Should say flase:',find('f',array2));
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-  for (first of string){
+  for (let first of string){
     if (letter === first){
       return true;
     }
@@ -104,7 +104,7 @@ let array3 = [1, 2, 3, 4];
 function sumAll( array ) {
   let sum = 0
 // TODO: loop to add items
-  for (number of array){
+  for (let number of array){
     sum = number + sum;
   }
   return sum;
@@ -119,7 +119,7 @@ let negNumberArray = [-3, -2, -1, 0];
 
 function newArrayMaker (array){
   let newArray = [];
-  for (number of array){
+  for (let number of array){
     if (number > 0){
       newArray.push(number);
     }
